@@ -1,0 +1,48 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://www.j2inn.com/privacy
+- https://www.siemens.com/en-us/terms-of-use/
+signals:
+  data_subject_request:
+    url: https://www.j2inn.com/privacy
+    section: Your rights / Data privacy contact
+    channel: info@j2innovations.com
+    evidence:
+    - source: https://www.j2inn.com/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: "The data protection laws in the jurisdiction in which you reside may entitle you to specific rights in relation to your personal data."
+    - source: https://www.j2inn.com/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: "Our Data Privacy Organization provides support with any data privacy related questions, comments, concerns or complaints or in case you wish to exercise any of your data privacy related rights."
+    note: Lists access, correction, erasure, restriction, data portability (for data actively provided) and objection; requests go by email to info@j2innovations.com. No self-service or API request channel is documented.
+  data_retention:
+    url: https://www.j2inn.com/privacy
+    section: Retention periods
+    stated_period: none stated (erased when no longer necessary)
+    evidence:
+    - source: https://www.j2inn.com/privacy
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: "Unless indicated otherwise at the time of the collection of your personal data (e.g. within a form completed by you), we erase your personal data if the retention of that personal data is no longer necessary (i) for the purposes for which they were collected or otherwise processed, or (ii) to comply with legal obligations (such as retention obligations under tax or commercial laws)."
+    note: Purpose-limited retention rule; no fixed period is published.
+  notice_and_action:
+    url: https://www.siemens.com/global/en/company/about/compliance/eu-digital-services-act.html
+    section: Siemens Terms of Use (parent company)
+    evidence:
+    - source: https://www.siemens.com/en-us/terms-of-use/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: "Information on how to report any violation of these Terms of Use, including any content the User believes to be illegal, can be found on the Digital Services Act information page on the Siemens Website, available under https://www.siemens.com/global/en/company/about/compliance/eu-digital-services-act.html and on the DMCA information page, available under https://www.siemens.com/en-us/company/customer-partner-terms/sw-terms/dmca ."
+    note: This is the Siemens parent terms of use, linked as the terms from the j2inn.com footer; the reporting route is Siemens's group DSA page, not a J2-specific one. The DSA page URL is quoted from the terms and was not fetched in this pass.
+note: >-
+  Read from J2 Innovations' own privacy notice and the Siemens parent terms it links to. Signals left out on purpose:
+  the privacy notice's "Data portability" item is a GDPR data-subject right, not cloud-switching exit assistance;
+  it says "At this time our Internet sites do not recognize or respond to “Do Not Track” browser signals" and does not
+  mention Global Privacy Control; data leaving the EEA is covered by Binding Corporate Rules and EU Standard Contractual
+  Clauses, which is a transfer mechanism, not a data-residency commitment; the under-13 children's notice is not age
+  assurance; and the Siemens terms' mention of "available training data" is an AI-output disclaimer for Siemens website AI
+  services, not a training-data summary. No SBOM, support-lifetime, accessibility conformance, subprocessor list,
+  incident-notification SLA or transparency report was found on these pages.

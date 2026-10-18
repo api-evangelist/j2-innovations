@@ -1,23 +1,153 @@
 aid: j2-innovations
+
 name: J2 Innovations
-description: 'J2 Innovations is a company surfaced via the API Evangelist harvest backlog (source: kin-score-markets)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: J2 Innovations ("A Siemens Company") is the creator of FIN Framework (FIN), an open software platform for smart buildings, smart
+  equipment and IoT, used by OEMs, system integrators and building owners for building automation, supervisory control and edge-to-cloud applications.
+  Based in California, it is a wholly-owned subsidiary of Siemens AG and an independent legal entity, and a founder and supporter of Project Haystack.
+  Product documentation for FIN is published at docs.finproducts.com.
+
 url: https://raw.githubusercontent.com/api-evangelist/j2-innovations/refs/heads/main/apis.yml
+
+image: https://www.j2inn.com/hubfs/J2%20Innovations_A_Siemens_Company_Logo_with_tagline_deep_blue_background_4C.svg
+
 x-type: company
+
 x-source: harvest:kin-score-markets
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-18 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-18'
+
 modified: '2026-10-18'
+
 tags:
 - Company
-apis: []
+- Smart Buildings
+- Building Automation
+- IoT
+- Project Haystack
+- Smart Equipment
+- Siemens
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Components
+  url: components/j2-innovations-components.yml
+- type: ChangeLog
+  url: changelog/j2-innovations-changelog.yml
+- type: Conventions
+  url: conventions/j2-innovations-conventions.yml
+- type: Authentication
+  url: authentication/j2-innovations-authentication.yml
+- type: Lifecycle
+  url: lifecycle/j2-innovations-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/j2-innovations-problem-types.yml
+- type: Conformance
+  url: conformance/j2-innovations-conformance.yml
+- type: SecurityTxt
+  url: well-known/j2-innovations-www-security.txt
+- type: SecurityTxt
+  url: well-known/j2-innovations-finproducts-security.txt
+- type: WellKnown
+  url: well-known/j2-innovations-well-known.yml
+- type: Hosts
+  url: hosts/j2-innovations-hosts.yml
+- type: IntegrationEdges
+  url: integrations/j2-innovations-integration-edges.yml
+- type: Vendors
+  url: vendors/j2-innovations-vendors.yml
+- type: SDKs
+  url: packages/j2-innovations-packages.yml
+- type: Packages
+  url: packages/j2-innovations-packages.yml
+- type: DomainSecurity
+  url: security/j2-innovations-domain-security.yml
 - type: Website
-  url: https://j2inn.com
+  url: https://www.j2inn.com/
+- type: Documentation
+  url: http://docs.finproducts.com/
+- type: GettingStarted
+  url: https://www.j2inn.com/get-started-with-fin
+- type: HelpCenter
+  url: https://www.j2inn.com/help-center
+- type: Training
+  url: https://www.j2inn.com/training
+- type: Blog
+  url: https://www.j2inn.com/blog
+- type: AboutUs
+  url: https://www.j2inn.com/about-us
+- type: GitHubOrganization
+  url: https://github.com/j2inn
+- type: PrivacyPolicy
+  url: https://www.j2inn.com/privacy
+- type: TermsOfService
+  url: https://www.siemens.com/global/en/general/terms-of-use.html
+- type: LinkedIn
+  url: https://www.linkedin.com/company/j2-innovations/
+- type: YouTube
+  url: https://www.youtube.com/c/J2Innovations
+- type: Twitter
+  url: https://twitter.com/j2innovations
+
+apis:
+- name: FIN Framework Haystack REST API
+  description: Project Haystack REST API served by each self-hosted FIN Framework instance at http://{host}/api/{projName}/, with Haystack ops
+    such as about, ops, read (Axon filter), eval, hisRead and POSTed Zinc or JSON grids, as documented on the public FIN Framework Confluence
+    page "Haystack REST APIs".
+  humanURL: https://finproducts.atlassian.net/wiki/spaces/FINFramework/pages/889389464/Haystack+REST+APIs
+  baseURL: http://{host}/api/{projName}
+  tags:
+  - Project Haystack
+  - Building Automation
+  properties:
+  - type: Documentation
+    url: https://finproducts.atlassian.net/wiki/spaces/FINFramework/pages/889389464/Haystack+REST+APIs
+  aid: j2-innovations:fin-framework-haystack-rest-api
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website j2inn.com (apex unreachable, www answers 200, title "J2 Innovations - Homepage"). Pointers taken from links on the homepage
+    footer/nav and fetched; docs.finproducts.com redirects to a public Confluence (anonymous REST space listing 200). Terms of use are the Siemens
+    parent terms linked from the j2inn.com footer.
+  evidence:
+  - url: https://j2inn.com
+    status: 0
+  - url: https://www.j2inn.com/
+    status: 200
+  - url: http://docs.finproducts.com/
+    status: 200
+  - url: https://finproducts.atlassian.net/wiki/rest/api/space?limit=5
+    status: 200
+  - url: https://www.j2inn.com/get-started-with-fin
+    status: 200
+  - url: https://www.j2inn.com/help-center
+    status: 200
+  - url: https://www.j2inn.com/training
+    status: 200
+  - url: https://www.j2inn.com/blog
+    status: 200
+  - url: https://www.j2inn.com/about-us
+    status: 200
+  - url: https://github.com/j2inn
+    status: 200
+  - url: https://www.j2inn.com/privacy
+    status: 200
+  - url: https://www.siemens.com/global/en/general/terms-of-use.html
+    status: 200
+x-enrichment:
+  date: '2026-10-18'
+  status: enriched
+  artifacts_added: 22
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=deepseek,regulatory=anthropic

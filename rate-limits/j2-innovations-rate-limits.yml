@@ -1,0 +1,6 @@
+generated: '2026-10-18'
+method: searched
+source: https://project-haystack.org/doc/docHaystack/HttpApi
+name: J2 Innovations rate limits
+limits: []
+note: Haystack HTTP API specification mentions throttling based on timeouts or limits on amount of data returned, but no specific rate limits are documented. Incomplete data is signaled via 'incomplete' tag in grid metadata with 'limit' or 'timeout' sub-tags.

@@ -1,0 +1,38 @@
+name: J2 Innovations FIN Framework MCP server (candidate)
+type: MCPServer
+generated: '2026-10-18'
+method: derived
+source: apis.yml (FIN Framework Haystack REST API entry, documented at https://finproducts.atlassian.net/wiki/spaces/FINFramework/pages/889389464/Haystack+REST+APIs)
+status: candidate
+description: >-
+  No official MCP server from J2 Innovations was found. A web search for a FIN Framework MCP server
+  returned nothing, the j2inn GitHub org (16 public repos) has no MCP, AI or agent repo, and
+  https://www.j2inn.com/mcp answered 403, with a control path also answering 403 (opaque, not evidence
+  of a server). The tools below are a CANDIDATE list taken from the Haystack ops named in the
+  repo's API description. They are not tools a live server publishes.
+server:
+  transport: none
+auth: unknown
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived
+tools:
+- name: about
+  description: Haystack 'about' op. Returns server and project information for a FIN instance.
+  backing: Haystack op about
+- name: ops
+  description: Haystack 'ops' op. Lists the operations the FIN instance supports.
+  backing: Haystack op ops
+- name: read
+  description: Haystack 'read' op. Queries entity records with an Axon/Haystack filter.
+  backing: Haystack op read
+- name: eval
+  description: Evaluates an Axon expression on the FIN instance.
+  backing: Haystack op eval
+- name: hisRead
+  description: Reads historized (time-series) data for a point over a range.
+  backing: Haystack op hisRead
+notes:
+- No OpenAPI contract exists in this repo, so no tool crosswalk, overlay or agent skills were produced.
+- FIN Framework is self-hosted, so each instance serves its own Haystack API at http://{host}/api/{projName}. A remote MCP endpoint would have to be per-instance.

@@ -1,0 +1,31 @@
+generated: '2026-10-18'
+method: searched
+source: https://github.com/j2inn/haystack-core/releases
+scheme: Semantic versioning
+current_version: 3.0.13
+entries:
+  - version: 3.0.13
+    date: '2026-07-07'
+    breaking: false
+    highlights:
+      - Improve relativisation by also taking into account other non-containment refs
+  - version: 3.0.12
+    date: '2026-06-24'
+    breaking: false
+    highlights:
+      - Update dependencies
+  - version: 3.0.10
+    date: '2026-06-24'
+    breaking: false
+    highlights:
+      - Add new relativisation support methods
+  - version: 3.0.9
+    date: '2026-02-23'
+    breaking: false
+    highlights:
+      - Ensure JSON encoding does not create empty grid columns meta
+  - version: 3.0.8
+    date: '2025-10-14'
+    breaking: false
+    highlights:
+      - Will now be able to use getIANATimezone with an Antarctica based timezone

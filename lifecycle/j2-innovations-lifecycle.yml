@@ -1,0 +1,7 @@
+generated: '2026-10-18'
+method: searched
+source: https://github.com/j2inn/haystack-core/releases, https://project-haystack.org/
+versioning: Semantic versioning (major.minor.patch) used in GitHub releases
+deprecation: No explicit deprecation policy found in documentation
+status_page: null
+note: Project Haystack is an open standard; J2 Innovations maintains reference implementations and SDKs. Version information derived from GitHub releases of haystack-core package.

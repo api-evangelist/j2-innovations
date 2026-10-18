@@ -1,0 +1,27 @@
+generated: '2026-10-18'
+method: searched
+source: https://project-haystack.org/doc/docHaystack/Auth
+docs: https://project-haystack.org/doc/docHaystack/Auth
+schemes:
+  - name: SCRAM
+    type: http
+    description: Salted Challenge Response Authentication Mechanism (RFC5802, RFC7804)
+    flow: |
+      1. Hello Handshake: Client sends hello message with username
+      2. Server responds with supported authentication mechanisms
+      3. Authentication Exchange: Client picks mechanism and exchanges messages
+      4. Server sends auth token if authentication successful
+      5. Client uses auth token (bearer token) for future requests
+    notes: Uses HTTP Authentication framework (RFC7235) with SCRAM mechanism
+  - name: PLAINTEXT
+    type: http
+    description: Plaintext authentication (less secure, for testing)
+    flow: Similar to SCRAM but with plaintext credentials
+    notes: Defined in Haystack specification but less secure than SCRAM
+  - name: Bearer Token
+    type: apiKey
+    description: Auth token obtained after successful authentication
+    in: header
+    param_name: Authorization
+    format: bearer {token}
+    notes: Used for authenticated requests after successful SCRAM or PLAINTEXT authentication

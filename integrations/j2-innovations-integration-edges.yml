@@ -1,0 +1,41 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://zapier.com/apps/j2-innovations/integrations
+- https://n8n.io/integrations/j2-innovations/
+- https://composio.dev/toolkits/j2-innovations
+- https://monid.ai/tools/j2-innovations
+checked:
+- https://composio.dev/toolkits/j2-innovations
+- https://make.com/en/integrations/j2-innovations
+- https://monid.ai/tools/j2-innovations
+- https://n8n.io/integrations/j2-innovations
+- https://n8n.io/integrations/j2-innovations/
+- https://www.j2inn.com/distributor-and-partners
+- https://www.j2inn.com/oem-partners
+- https://zapier.com/apps/j2-innovations/integrations
+summary: null
+marketplace_apps: []
+edges:
+- type: claimed
+  relationship: core-infrastructure
+  direction: provider-built
+  partner: siemens
+  partner_name: Siemens AG
+  evidence: https://www.j2inn.com/
+  evidence_url: https://www.j2inn.com/
+- type: claimed
+  relationship: connector-listing
+  direction: partner-built
+  partner: null
+  partner_name: Multiple OEM Partners
+  evidence: https://www.j2inn.com/oem-partners
+  evidence_url: https://www.j2inn.com/oem-partners
+- type: claimed
+  relationship: connector-listing
+  direction: partner-built
+  partner: null
+  partner_name: Multiple Distributor Partners
+  evidence: https://www.j2inn.com/distributor-and-partners
+  evidence_url: https://www.j2inn.com/distributor-and-partners
+templates: []

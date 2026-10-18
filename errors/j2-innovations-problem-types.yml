@@ -1,0 +1,54 @@
+generated: '2026-10-18'
+method: searched
+source: https://project-haystack.org/doc/docHaystack/HttpApi
+format: Haystack error grid
+envelope:
+  err: marker tag in grid metadata indicating error
+  dis: human-readable description in grid metadata
+  errTrace: optional stack trace in grid metadata (multi-line string)
+problems:
+  - status: 400
+    title: Bad Request
+    type: http-error
+    description: Client failed to specify a required header such as "Content-Type"
+    remediation: Include required headers in request
+  - status: 401
+    title: Unauthorized
+    type: http-error
+    description: Client attempted to access protected resource without valid auth token
+    remediation: Complete authentication handshake to obtain auth token
+  - status: 403
+    title: Forbidden
+    type: http-error
+    description: Client is not authorized to access the operation
+    remediation: Check authentication credentials and permissions
+  - status: 404
+    title: Not Found
+    type: http-error
+    description: URI does not map to a valid operation URI
+    remediation: Check operation URI path
+  - status: 405
+    title: Method Not Allowed
+    type: http-error
+    description: Attempt to use GET with an operation not tagged "noSideEffects"
+    remediation: Use POST for operations with side effects
+  - status: 406
+    title: Not Acceptable
+    type: http-error
+    description: Client "Accept" header requested an unsupported MIME type
+    remediation: Request supported MIME types (text/zinc, application/json)
+  - status: 415
+    title: Unsupported Media Type
+    type: http-error
+    description: Client posted request grid using unsupported MIME type
+    remediation: Use supported MIME types (text/zinc, application/json)
+  - status: 501
+    title: Not Implemented
+    type: http-error
+    description: HTTP method is other than "GET" or "POST"
+    remediation: Use only GET or POST methods
+  - status: 200
+    title: Request Error
+    type: error-grid
+    description: Operation failed after request grid successfully read (error grid returned)
+    remediation: Check error grid details for specific problem (invalid data, unknown identifiers, etc.)

@@ -1,0 +1,19 @@
+generated: '2026-10-18'
+method: searched
+source: https://project-haystack.org/doc/docHaystack/HttpApi, https://project-haystack.org/doc/docHaystack/Ops
+auth_style: HTTP Authentication with SCRAM or Bearer tokens
+idempotency:
+  coverage: none
+  note: No idempotency mechanism documented in Haystack specification
+pagination:
+  style: none
+  note: Haystack operations return complete result grids; no pagination mechanism documented
+field_expansion: No field expansion or sparse fieldsets documented
+metadata: Grid metadata includes version (ver), error markers (err), and descriptive tags (dis)
+request_id_tracing: No request ID tracing documented
+versioning: API version indicated in grid metadata (ver:"3.0")
+error_envelope: Error grids use metadata tags (err, dis, errTrace)
+rate_limit_signaling: No rate limit signaling documented in specification
+reversibility:
+  coverage: na
+  note: Haystack REST API is primarily read/query interface for IoT data; write operations (hisWrite, pointWrite) may have reversal characteristics depending on implementation

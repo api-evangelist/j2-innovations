@@ -1,0 +1,31 @@
+generated: '2026-10-18'
+method: searched
+source: https://project-haystack.org/doc/docHaystack/Auth, https://project-haystack.org/doc/docHaystack/Intro
+standards:
+  - id: RFC7235
+    conforms: true
+    evidence: "HTTP/1.1 Authentication framework used as basis for Haystack authentication protocol"
+  - id: RFC5802
+    conforms: true
+    evidence: "SCRAM (Salted Challenge Response Authentication Mechanism) authentication supported"
+  - id: RFC7615
+    conforms: true
+    evidence: "Authentication-Info header used for returning auth tokens"
+  - id: RFC4648
+    conforms: true
+    evidence: "Base64url encoding used for authentication parameters"
+  - id: RFC7804
+    conforms: true
+    evidence: "Salted Challenge Response HTTP Authentication Mechanism"
+  - id: Project Haystack
+    conforms: true
+    evidence: "Implements Project Haystack standard for IoT data modeling and exchange"
+  - id: oauth2
+    conforms: false
+    evidence: "Uses custom SCRAM-based authentication, not OAuth 2.0"
+  - id: json:api
+    conforms: false
+    evidence: "Uses Haystack-specific JSON format for data exchange"
+  - id: rfc9457
+    conforms: false
+    evidence: "No evidence of Problem Details for HTTP APIs (RFC 9457) implementation"

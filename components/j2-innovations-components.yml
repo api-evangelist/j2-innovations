@@ -1,0 +1,13 @@
+generated: '2026-10-18'
+method: searched
+source: https://github.com/j2inn/haystack-react
+families:
+  - name: React Utilities
+    description: Project Haystack utilities for building React applications
+    components:
+      - name: haystack-react
+        type: npm-package
+        url: https://www.npmjs.com/package/haystack-react
+        loader: npm install haystack-react
+        note: TypeScript library providing React hooks and components for Haystack data
+    note: Provides React integration for Project Haystack data types and operations

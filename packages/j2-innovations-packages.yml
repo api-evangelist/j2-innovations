@@ -1,0 +1,68 @@
+generated: '2026-10-18'
+method: searched
+source: https://github.com/j2inn, https://registry.npmjs.org/
+packages:
+  - name: haystack-core
+    registry: npm
+    url: https://www.npmjs.com/package/haystack-core
+    language: TypeScript
+    official: true
+    version: 3.0.13
+    published: 2026-07-07
+    note: Project Haystack Core TypeScript library
+  - name: haystack-units
+    registry: npm
+    url: https://www.npmjs.com/package/haystack-units
+    language: TypeScript
+    official: true
+    version: 2.0.8
+    published: 2026-07-07
+    note: Project Haystack core units TypeScript library
+  - name: haystack-nclient
+    registry: npm
+    url: https://www.npmjs.com/package/haystack-nclient
+    language: TypeScript
+    official: true
+    version: 4.0.7
+    published: 2026-07-07
+    note: Project Haystack Network Client
+  - name: haystack-react
+    registry: npm
+    url: https://www.npmjs.com/package/haystack-react
+    language: TypeScript
+    official: true
+    version: 4.0.5
+    published: 2026-07-07
+    note: Project Haystack utilities for building React applications
+  - name: haystack-codegen
+    registry: npm
+    url: https://www.npmjs.com/package/haystack-codegen
+    language: TypeScript
+    official: true
+    version: 1.0.9
+    published: 2026-07-07
+    note: Project Haystack Core code generation tools
+  - name: hayson
+    registry: none
+    url: https://github.com/j2inn/hayson
+    language: Specification
+    official: true
+    version: null
+    published: null
+    note: JSON Schema and OpenAPI schemas for Haystack data types
+  - name: nhaystack
+    registry: none
+    url: https://github.com/j2inn/nhaystack
+    language: .NET
+    official: true
+    version: null
+    published: null
+    note: .NET Haystack library (no package.json found)
+  - name: libhaystack
+    registry: none
+    url: https://github.com/j2inn/libhaystack
+    language: C
+    official: true
+    version: null
+    published: null
+    note: C library for Haystack (no package.json found)
