@@ -6,13 +6,17 @@ source:
 - https://composio.dev/toolkits/j2-innovations
 - https://monid.ai/tools/j2-innovations
 checked:
+- https://brickschema.org/consortium/
 - https://composio.dev/toolkits/j2-innovations
 - https://make.com/en/integrations/j2-innovations
+- https://marketing.project-haystack.org/about-us
 - https://monid.ai/tools/j2-innovations
 - https://n8n.io/integrations/j2-innovations
 - https://n8n.io/integrations/j2-innovations/
+- https://www.bacnetinternational.net/btl/
 - https://www.j2inn.com/distributor-and-partners
 - https://www.j2inn.com/oem-partners
+- https://www.knx.org/community/manufacturers
 - https://zapier.com/apps/j2-innovations/integrations
 summary: null
 marketplace_apps: []
@@ -38,4 +42,92 @@ edges:
   partner_name: Multiple Distributor Partners
   evidence: https://www.j2inn.com/distributor-and-partners
   evidence_url: https://www.j2inn.com/distributor-and-partners
+- partner_name: BACnet Testing Laboratories (BTL Listed)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  evidence: https://www.bacnetinternational.net/btl/?m=323
+  category: building automation
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: BTL Listing of Tested Products (bacnetinternational.net/btl)
+    spec_file: null
+    standard: BACnet (BTL)
+    role: btl-listed-manufacturer
+    registered_name: J2 Innovations
+    website: http://www.j2inn.com
+    matched_domain: j2inn.com
+    matched_by: domain
+    btl_manufacturer_ids:
+    - '323'
+    certified_products:
+    - product: BACnet Operator Workstation (B-OWS)
+      lapsed: false
+      listed_products:
+      - FIN Framework
+      - FIN Framework BACnet Operator Workstation
+    - product: BACnet Lighting Operator Display (B-LOD)
+      lapsed: false
+      listed_products:
+      - FIN Framework
+    - product: BACnet Broadcast Management Device (B-BBMD)
+      lapsed: false
+      listed_products:
+      - FIN Framework
+    signal_note: certified_products = one entry per BACnet DEVICE PROFILE with a BTL-listed product (the product
+      type); product names are context, never a count; current listing only (archives.php superseded listings not
+      read)
+    detected_by: sweep-building-automation.py
+    detected: '2026-10-19'
+  detected_by: sweep-building-automation.py
+  first_seen: '2026-10-19'
+- partner_name: BACnet Testing Laboratories (BTL Listed)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  evidence: https://www.bacnetinternational.net/btl/?m=323
+  category: building automation
+  channel: standard-directory
+  relationship: compatible
+  shape: bacnet
+  evidence_kind: conformance-register
+  degree: certified
+  report_only: true
+  contract_reference:
+    register: BTL Listing of Tested Products (bacnetinternational.net/btl)
+    spec_file: null
+    standard: BACnet (BTL)
+    role: btl-listed-bacnet-device
+    registered_name: J2 Innovations
+    matched_domain: j2inn.com
+    detected_by: sweep-building-automation.py
+    detected: '2026-10-19'
+  detected_by: sweep-building-automation.py
+  first_seen: '2026-10-19'
+- partner_name: Project Haystack (members)
+  partner: null
+  partner_match: register
+  type: register
+  direction: partner-built
+  evidence: https://marketing.project-haystack.org/about-us
+  category: building data semantics
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: Project Haystack members (marketing.project-haystack.org/about-us)
+    spec_file: null
+    standard: Project Haystack
+    role: haystack-founding-member
+    registered_name: j2innovations
+    website: https://www.j2inn.com
+    matched_domain: j2inn.com
+    matched_by: domain
+    signal_note: 'participation only: membership level is context'
+    detected_by: sweep-building-automation.py
+    detected: '2026-10-19'
+  detected_by: sweep-building-automation.py
+  first_seen: '2026-10-19'
 templates: []
